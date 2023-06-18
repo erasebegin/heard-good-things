@@ -10,9 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@supabase/auth-helpers-react": "^0.4.0",
+    "@supabase/supabase-js": "^2.22.0",
+    "@types/node": "^20.2.3",
+    "framer-motion": "^10.12.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "6.0.0-rc.1"
+    "react-router-dom": "^6.11.2",
+    "supabase": "^1.62.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

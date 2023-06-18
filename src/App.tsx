@@ -1,6 +1,5 @@
 import logo from './assets/HGT-logo-master.png';
-import styled from 'styled-components';
-import './App.css';
+import styled from '@emotion/styled';
 import { useState } from 'react';
 
 function App() {
@@ -89,11 +88,11 @@ function App() {
   );
 }
 
-const Main = styled.main<{ $positionX: string }>`
+const Main = styled.main<{ $positionX: string, theme?: any }>`
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: ${(props) => props.theme.colors.colorTheme5};
+  background: ${(props) => props.theme.colors.brandOrange[200]};
   overflow: hidden;
 
   .container {
@@ -115,7 +114,7 @@ const Main = styled.main<{ $positionX: string }>`
       font-weight: 700;
       font-size: 4rem;
       color: white;
-      text-shadow: 2px 2px ${(props) => props.theme.colors.colorTheme2};
+      text-shadow: 2px 2px ${(props) => props.theme.colors.brandGreen[300]};
     }
   }
 
@@ -141,6 +140,7 @@ const Main = styled.main<{ $positionX: string }>`
     justify-content: space-between;
     gap: 0.5rem;
     border: none;
+    padding: 0px 1rem;
 
     svg {
       color: white;
@@ -154,12 +154,14 @@ const Main = styled.main<{ $positionX: string }>`
       position: absolute;
       left: 1rem;
       transform: rotate(-2deg);
-      background: ${(props) => props.theme.colors.colorTheme2};
-      box-shadow: ${(props) => props.theme.colors.colorTheme3} 5px 5px 0px 0px;
+      background: ${(props) => props.theme.colors.brandGreen[300]};
+      box-shadow: ${(props) => props.theme.colors.brandYellow[300]} 5px 5px 0px
+        0px;
       transition: 100ms ease-in;
 
       &:active {
-        box-shadow: ${(props) => props.theme.colors.colorTheme4} 0px 0px 0px 0px;
+        box-shadow: ${(props) => props.theme.colors.brandYellow[300]} 0px 0px
+          0px 0px;
         transform: translate(5px, 5px) rotate(-2deg);
         transition: 100ms ease-in-out;
       }
@@ -174,12 +176,14 @@ const Main = styled.main<{ $positionX: string }>`
       right: 1rem;
       top: 8rem;
       transform: rotate(3deg);
-      background: ${(props) => props.theme.colors.colorTheme1};
-      box-shadow: ${(props) => props.theme.colors.colorTheme4} 5px 5px 0px 0px;
+      background: ${(props) => props.theme.colors.brandBlue[200]};
+      box-shadow: ${(props) => props.theme.colors.brandPink[100]} 5px 5px 0px
+        0px;
       transition: 100ms ease-out;
 
       &:active {
-        box-shadow: ${(props) => props.theme.colors.colorTheme4} 0px 0px 0px 0px;
+        box-shadow: ${(props) => props.theme.colors.brandPink[100]} 0px 0px 0px
+          0px;
         transform: translate(5px, 5px) rotate(3deg);
         transition: 100ms ease-out;
       }
